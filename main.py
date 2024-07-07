@@ -21,6 +21,15 @@ def calculate_silicone_weight(figure_weight, figure_density, box_volume):
 
 
 class SiliconeCalculatorApp(App):
+    def __init__(self, **kwargs):
+        super().__init__(**kwargs)
+        self.result_label = None
+        self.figure_material_spinner = None
+        self.figure_weight_input = None
+        self.box_height_input = None
+        self.box_length_input = None
+        self.box_width_input = None
+
     def build(self):
         layout = GridLayout(cols=2, padding=10, spacing=5)
 
